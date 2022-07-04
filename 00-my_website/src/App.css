@@ -11,14 +11,42 @@ body {
   color: #16293c;
   line-height: 1.5;
   font-size: 0.875rem;
-  background: #e7d8bfcf;
+  background: #d9d8d8;
 }
 ul {
   list-style-type: none;
 }
 a {
   text-decoration: none;
+  margin-left: 30px;
+  margin-bottom: 30px;
+  padding: 0.8em 1em;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #080f15;
+  text-transform: uppercase;
+  font-size: 1rem;
+  font-weight: bolder;
+  border-radius: 10px;
+  background: linear-gradient(90deg, #0162c8, #55e7fc);
+  cursor: pointer;
+  animation: zoom-in-zoom-out 3s ease infinite;
 }
+
+@keyframes zoom-in-zoom-out {
+  0% {
+    transform: scale(1, 1);
+  }
+  50% {
+    transform: scale(1.1, 1.1);
+  }
+  100% {
+    transform: scale(1, 1);
+  }
+}
+
 h1,
 h2,
 h3,
@@ -43,6 +71,7 @@ h4 {
 p {
   margin-bottom: 1.25rem;
 }
+
 @media screen and (min-width: 800px) {
   h1 {
     font-size: 2.5rem;
@@ -67,18 +96,95 @@ p {
   }
 }
 
+/* .App-header::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 65%;
+  top: 0;
+  left: 0;
+  background: url(./images/header\ back.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  z-index: -1;
+} */
+
 .App-header {
+  position: relative;
   display: flex;
   flex-direction: column;
-  background-color: #e1c595ba;
+  background-color: #fff;
+  width: 100%;
+  /* justify-content: space-between; */
+  z-index: 1;
+  align-items: flex-start;
+}
+
+.App-header-personal {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding-right: 40px;
+}
+
+.App-header-personal ul {
+  display: none;
+}
+
+.App-header-info {
+  width: 100%;
+  display: flex;
+  flex-direction: row-reverse;
   justify-content: space-between;
   align-items: center;
 }
 
-.App-header img {
-  width: 40%;
-  height: 100px;
-  object-fit: cover;
+.personal-info {
+  padding-top: 40px;
+  padding-left: 10px;
+}
+
+.info {
+  height: 60vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.App-header-info p {
+  margin-left: 10px;
+  font-size: 1rem;
+}
+
+.header-image {
+  display: none;
+}
+
+@media screen and (min-width: 765px) {
+  .App-header-personal ul {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+  }
+
+  .App-header-personal li {
+    cursor: pointer;
+    transition: 0.2s ease-in-out;
+  }
+
+  .App-header-personal li:hover {
+    transform: translate(0, 0.3em) scale(1.1);
+  }
+
+  .header-image {
+    display: block;
+    width: 60%;
+    height: 80vh;
+    object-fit: cover;
+    z-index: -1;
+  }
 }
 
 .App-main {
@@ -88,7 +194,7 @@ p {
 }
 
 .App-main-title {
-  margin-top: 40px;
+  margin-top: 80px;
   margin-left: 10px;
 }
 
@@ -101,30 +207,41 @@ p {
 }
 
 .App-main-projects {
+  margin-bottom: 50px;
   margin-top: 20px;
   display: flex;
   flex-wrap: wrap;
 }
 
+@media screen and (min-width: 765px) {
+  .App-main-projects {
+    width: 85%;
+    margin: auto;
+    margin-bottom: 50px;
+    margin-top: 20px;
+  }
+}
+
 .project {
   margin: 0 auto;
   width: 90%;
+  height: 50vh;
   /* max-width: 400px; */
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
-  background: rgb(255, 239, 233);
+  background: #fff;
   border-radius: 10px;
-  margin-bottom: 30px;
+  margin-bottom: 50px;
   box-shadow: -3px 3px 5px rgba(0, 0, 0, 0.2), 3px 0 10px rgba(0, 0, 0, 0.2);
   transition: 0.3s ease;
   cursor: pointer;
 }
 
-@media screen and (min-width: 700px) {
+@media screen and (min-width: 765px) {
   .project {
-    max-width: 450px;
+    max-width: 350px;
   }
 }
 
@@ -153,9 +270,68 @@ p {
 }
 
 .App-footer {
+  background-color: #080f15;
+  color: #ffefe9;
+  padding: 1rem;
+  margin-top: 50px;
+}
+.App-footer div {
+  margin-top: 0.5rem;
+}
+.App-footer-icons li {
+  cursor: pointer;
+  transition: 0.2s ease-in-out;
+  /* background-color: aqua; */
+}
+
+.App-footer-icons li:hover {
+  transform: translate(0, -0.3em) scale(1.1);
+}
+
+.App-footer-texts li {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.App-footer ul {
   display: flex;
   flex-wrap: wrap;
-  padding: 1rem;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
+}
+
+.App-footer li {
+  margin-left: 0.3rem;
+  margin-right: 0.3rem;
+}
+
+.visible-scroll {
+  cursor: pointer;
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  bottom: 8%;
+  right: 10%;
+  width: 40px;
+  height: 50px;
+  border-radius: 30%;
+  background: #fff;
+  color: #16293c;
+  animation: scrollTop 1.5s infinite ease;
+}
+
+@keyframes scrollTop {
+  from {
+    transform: translateY(5px);
+  }
+  to {
+    transform: translateY(-3px);
+  }
+}
+
+.non-visible-scroll {
+  display: none;
 }
