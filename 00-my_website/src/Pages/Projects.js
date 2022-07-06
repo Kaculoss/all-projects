@@ -10,45 +10,15 @@ import {
   FaFileCode,
 } from "react-icons/fa";
 import { GrMail } from "react-icons/gr";
-import { ScrollToTop } from "../ScrollToTop";
-
-export const profiles = {
-  twitter: "https://twitter.com/Sani_M_Alhassan",
-  linkedin: "https://linkedin.com/in/sani-mohammed-alhassan-keezy",
-  instagram: "https://www.instagram.com/kaculoss/",
-  facebook: "https://web.facebook.com/kaculossde.dhopebwoy/",
-  github: "https://github.com/Kaculoss",
-};
-
-export const openInNewTab = (url) => {
-  const newWindow = window.open(url, "_blank", "noreferrer");
-  if (newWindow) newWindow.opener = null;
-};
+import SocialMediaIcons, { openInNewTab } from "../Components/SocialMediaIcons";
+import { ScrollToBottom, ScrollToTop } from "../Components/ScrollButton";
 
 function Projects() {
   return (
-    <IconContext.Provider value={{ size: "2em", lineHeight: "2em" }}>
+    <IconContext.Provider value={{ size: "2em" }}>
       <div className="App">
         <header className="App-header">
-          <div className="App-header-personal">
-            <ul>
-              <li onClick={() => openInNewTab(profiles.github)}>
-                <FaGithubSquare color="#16293c" />
-              </li>
-              <li onClick={() => openInNewTab(profiles.linkedin)}>
-                <FaLinkedin color="#0077b5" />
-              </li>
-              <li onClick={() => openInNewTab(profiles.twitter)}>
-                <FaTwitterSquare color="#00acee" />
-              </li>
-              <li onClick={() => openInNewTab(profiles.instagram)}>
-                <FaInstagramSquare color="#cd486b" />
-              </li>
-              <li onClick={() => openInNewTab(profiles.twitter)}>
-                <FaFacebookSquare color="#3b5998" />
-              </li>
-            </ul>
-          </div>
+          <SocialMediaIcons />
           <div className="App-header-info">
             <img src="./images/head.webp" className="header-image" alt="head" />
             <div className="info">
@@ -72,27 +42,28 @@ function Projects() {
           </div>
         </header>
         <main className="App-main">
-          {projectData.map((project) => (
+          {projectData.allProjects.map((project) => (
             <AllProjects key={project.name} projects={project} />
           ))}
         </main>
         <ScrollToTop />
+        <ScrollToBottom />
         <footer className="App-footer">
           <div className="App-footer-icons">
             <ul>
-              <li onClick={() => openInNewTab(profiles.github)}>
+              <li onClick={() => openInNewTab(projectData.profiles.github)}>
                 <FaGithubSquare color="#4078c0" />
               </li>
-              <li onClick={() => openInNewTab(profiles.linkedin)}>
+              <li onClick={() => openInNewTab(projectData.profiles.linkedin)}>
                 <FaLinkedin color="#0077b5" />
               </li>
-              <li onClick={() => openInNewTab(profiles.twitter)}>
+              <li onClick={() => openInNewTab(projectData.profiles.twitter)}>
                 <FaTwitterSquare color="#00acee" />
               </li>
-              <li onClick={() => openInNewTab(profiles.instagram)}>
+              <li onClick={() => openInNewTab(projectData.profiles.instagram)}>
                 <FaInstagramSquare color="#cd486b" />
               </li>
-              <li onClick={() => openInNewTab(profiles.twitter)}>
+              <li onClick={() => openInNewTab(projectData.profiles.twitter)}>
                 <FaFacebookSquare color="#3b5998" />
               </li>
             </ul>

@@ -1,9 +1,13 @@
 import React from "react";
+import HeroSection from "../Components/HeroSection";
+import { ScrollToBottom, ScrollToTop } from "../Components/ScrollButton";
 
 export default function Home() {
   return (
     <div>
-      <h1>This is Home Page</h1>
+      <HeroSection />
+      <ScrollToTop />
+      <ScrollToBottom />
     </div>
   );
 }

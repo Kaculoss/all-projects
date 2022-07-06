@@ -45,7 +45,7 @@ p {
   margin-bottom: 1.25rem;
 }
 
-@media screen and (min-width: 800px) {
+@media screen and (min-width: 768px) {
   h1 {
     font-size: 2.5rem;
   }
@@ -67,6 +67,12 @@ p {
   h4 {
     line-height: 1;
   }
+}
+
+.container {
+  max-width: 1200px;
+  width: 90%;
+  margin: 0 auto;
 }
 
 /* .App-header::before {
@@ -177,6 +183,214 @@ p {
   }
 }
 
+/* PTEXT */
+.PText {
+  max-width: 500px;
+  margin: 0 auto;
+  font-size: 1.8rem;
+  line-height: 1.5rem;
+}
+
+@media screen and (max-width: 768px) {
+  .PText {
+    font-size: 1.4rem;
+  }
+}
+
+/* MYBUTTON */
+.MyButton {
+  margin-top: 2rem;
+}
+
+.MyButton .link-button {
+  font-size: 1.5rem;
+  background: linear-gradient(90deg, #0162c8, #55e7fc);
+  padding: 0.3em 1em;
+  border-radius: 10px;
+  display: inline-block;
+  color: #080f15;
+  text-transform: uppercase;
+  font-weight: bolder;
+}
+
+.MyButton .outline-link-button {
+  border: none;
+  outline: none;
+  position: relative;
+  z-index: 1;
+}
+
+.MyButton .outline-link-button::before {
+  content: "";
+  position: absolute;
+  top: 2px;
+  right: 2px;
+  bottom: 2px;
+  left: 2px;
+  background-color: #d9d8d8;
+  border-radius: 8px;
+  z-index: -1;
+}
+
+.MyButton .outline-link-button::after {
+  content: attr(data);
+}
+
+@media screen and (max-width: 768px) {
+  .MyButton .link-button {
+    font-size: 1.3rem;
+  }
+}
+
+/* SOCIAL MEDIA BUTTONS */
+/* 
+FaGithubSquare color="#16293c"
+FaLinkedin color="#0077b5"
+FaTwitterSquare color="#00acee"
+FaInstagramSquare color="#cd486b"
+FaFacebookSquare color="#3b5998"
+*/
+
+.social-media-icons ul {
+  display: flex;
+}
+.social-media-icons .dcolumn {
+  flex-direction: column;
+}
+.social-media-icons .drow {
+  flex-direction: row;
+}
+
+.social-media-icons li {
+  display: flex;
+  align-items: center;
+  background: transparent;
+  margin: 0.4em;
+  padding: 0;
+  width: 2em;
+  border-radius: 4px;
+  cursor: pointer;
+  box-shadow: 0px 10px 10px #00000026;
+  transition: all 0.5s ease-out;
+}
+
+.social-media-icons li:hover {
+  width: 8em;
+}
+
+.social-media-icons span {
+  display: none;
+}
+
+.social-media-icons li:hover > .gh {
+  color: #16293c;
+}
+.social-media-icons li:hover > .li {
+  color: #0077b5;
+}
+.social-media-icons li:hover > .tt {
+  color: #00acee;
+}
+.social-media-icons li:hover > .ig {
+  color: #cd486b;
+}
+.social-media-icons li:hover > .fb {
+  color: #3b5998;
+}
+
+.social-media-icons li:hover > span {
+  display: block;
+  font-size: 1.1rem;
+  font-weight: bolder;
+  margin-left: 5px;
+}
+
+/* HERO SECTION */
+.hero {
+  margin-top: -50px;
+  height: 100vh;
+  min-height: 950px;
+  width: 100%;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.hero .hero-heading {
+  font-size: 1.5rem;
+  margin-bottom: 0rem;
+  position: relative;
+}
+
+.hero .hero-heading span {
+  display: inline-block;
+  width: 100%;
+}
+
+.hero .hero-heading .hero-name {
+  font-size: 3rem;
+  color: #080f15;
+  font-weight: 700;
+}
+
+.hero .hero-img {
+  max-width: 800px;
+  width: 100%;
+  height: 600px;
+  margin: 0 auto;
+}
+
+.hero .hero-img img {
+  width: 100%;
+  height: 100%;
+  /* object-fit: cover; */
+}
+
+.hero .hero-info {
+  margin-top: -15rem;
+}
+
+.hero .social-media-icons {
+  position: absolute;
+  bottom: 150px;
+  width: 9rem;
+}
+
+.hero .MyButton .link-button {
+  animation: zoom-in-zoom-out 3s ease infinite;
+}
+
+@media screen and (max-width: 1000px) {
+  .hero .social-media-icons {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .hero {
+    min-height: 750px;
+  }
+
+  .hero .hero-heading {
+    font-size: 1rem;
+  }
+
+  .hero .hero-heading .hero-name {
+    font-size: 2rem;
+  }
+
+  .hero .hero-img {
+    height: 300px;
+    max-width: 400px;
+  }
+
+  .hero .hero-info {
+    margin-top: 2rem;
+  }
+}
+
 .App-header {
   position: relative;
   display: flex;
@@ -188,15 +402,7 @@ p {
   align-items: flex-start;
 }
 
-.App-header-personal {
-  width: 100%;
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  padding-right: 40px;
-}
-
-.App-header-personal ul {
+.App-header .social-media-icons {
   display: none;
 }
 
@@ -260,21 +466,22 @@ p {
   display: none;
 }
 
-@media screen and (min-width: 765px) {
-  .App-header-personal ul {
-    display: flex;
-    justify-content: space-between;
+@media screen and (min-width: 768px) {
+  .App-header .social-media-icons {
+    display: block;
     margin-top: 10px;
+    position: absolute;
+    right: 10px;
   }
 
-  .App-header-personal li {
+  /* .App-header-personal li {
     cursor: pointer;
     transition: 0.2s ease-in-out;
   }
 
   .App-header-personal li:hover {
     transform: translate(0, 0.3em) scale(1.1);
-  }
+  } */
 
   .header-image {
     display: block;
@@ -311,7 +518,7 @@ p {
   flex-wrap: wrap;
 }
 
-@media screen and (min-width: 765px) {
+@media screen and (min-width: 768px) {
   .App-main-projects {
     width: 85%;
     margin: auto;
@@ -337,7 +544,7 @@ p {
   cursor: pointer;
 }
 
-@media screen and (min-width: 765px) {
+@media screen and (min-width: 768px) {
   .project {
     max-width: 350px;
   }
