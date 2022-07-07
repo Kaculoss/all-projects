@@ -399,7 +399,7 @@ FaFacebookSquare color="#3b5998"
 .myImage .images {
   position: relative;
   width: 100%;
-  min-width: 350px;
+  /* min-width: 300px; */
   height: 550px;
 }
 
@@ -416,9 +416,24 @@ FaFacebookSquare color="#3b5998"
 }
 
 .myImage img {
-  width: 250px;
-  height: 400px;
+  max-width: 250px;
+  max-height: 400px;
   object-fit: cover;
+}
+
+@media screen and (max-width: 300px) {
+  .myImage .images {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .myImage .myImage-2 {
+    position: relative;
+  }
+  .myImage .myImage-1 {
+    display: none;
+  }
 }
 
 /* SECTION TITLE */
@@ -450,6 +465,7 @@ FaFacebookSquare color="#3b5998"
 /* ABOUT SECTION */
 .aboutSection {
   padding-bottom: 10rem;
+  margin-top: 5rem;
 }
 
 .aboutSection .container {
@@ -523,6 +539,42 @@ FaFacebookSquare color="#3b5998"
   .aboutSection .link-button {
     width: 100%;
     text-align: center;
+  }
+}
+
+/* SERVICES ITEM */
+.servicesItem {
+  text-align: center;
+}
+
+.servicesItem .servicesItem-icon svg {
+  width: 2rem;
+}
+
+.servicesItem .servicesItem-title {
+  font-size: 1.5rem;
+  font-weight: bolder;
+}
+
+/* SERVICE SECTION */
+.serviceSection {
+  padding-bottom: 10rem;
+}
+
+.serviceSection .services-allitems {
+  display: flex;
+  gap: 5rem;
+  justify-content: space-between;
+  margin-top: 1rem;
+}
+
+@media screen and (max-width: 768px) {
+  .serviceSection .services-allitems {
+    flex-direction: column;
+    max-width: 350px;
+    margin: 0 auto;
+    gap: 1.5rem;
+    margin-top: 2rem;
   }
 }
 
