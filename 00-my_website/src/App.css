@@ -354,7 +354,7 @@ FaFacebookSquare color="#3b5998"
 
 .hero .social-media-icons {
   position: absolute;
-  bottom: 150px;
+  bottom: 50px;
   width: 9rem;
 }
 
@@ -388,6 +388,141 @@ FaFacebookSquare color="#3b5998"
 
   .hero .hero-info {
     margin-top: 2rem;
+  }
+}
+
+/* MY IMAGES */
+.myImage {
+  margin: auto;
+}
+
+.myImage .images {
+  position: relative;
+  width: 100%;
+  min-width: 350px;
+  height: 550px;
+}
+
+.myImage .img-div {
+  position: absolute;
+}
+
+.myImage .myImage-1 {
+  right: 0;
+}
+
+.myImage .myImage-2 {
+  bottom: 0;
+}
+
+.myImage img {
+  width: 250px;
+  height: 400px;
+  object-fit: cover;
+}
+
+/* SECTION TITLE */
+.sectionTitle {
+  text-align: center;
+}
+
+.sectionTitle p {
+  font-size: 1.5rem;
+  margin-bottom: 0;
+}
+
+.sectionTitle h2 {
+  font-size: 4rem;
+  margin-top: 0rem;
+  text-transform: uppercase;
+}
+
+@media screen and (max-width: 768px) {
+  .sectionTitle p {
+    font-size: 1rem;
+  }
+
+  .sectionTitle h2 {
+    font-size: 2.2rem;
+  }
+}
+
+/* ABOUT SECTION */
+.aboutSection {
+  padding-bottom: 10rem;
+}
+
+.aboutSection .container {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  text-align: left;
+}
+
+.aboutSection .aboutSection-left,
+.aboutSection .aboutSection-right {
+  flex: 1;
+}
+
+.aboutSection .sectionTitle {
+  text-align: left;
+}
+
+.aboutSection .PText {
+  margin-top: 1rem;
+  margin-left: 0;
+}
+
+.aboutSection .aboutSection-btns {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+@media screen and (max-width: 950px) {
+  .aboutSection .aboutSection-left {
+    flex: 4;
+  }
+
+  .aboutSection .aboutSection-right {
+    flex: 3;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .aboutSection .container {
+    flex-direction: column;
+    text-align: center;
+  }
+  .aboutSection .aboutSection-left,
+  .aboutSection .aboutSection-right {
+    width: 100%;
+  }
+
+  .aboutSection .aboutSection-right {
+    margin-top: 2rem;
+  }
+
+  .aboutSection .sectionTitle {
+    text-align: center;
+  }
+
+  .aboutSection .PText {
+    margin: 0 auto;
+  }
+
+  .aboutSection .aboutSection-btns {
+    margin-top: 0;
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .aboutSection .MyButton,
+  .aboutSection .link-button {
+    width: 100%;
+    text-align: center;
   }
 }
 
