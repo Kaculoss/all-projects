@@ -578,6 +578,106 @@ FaFacebookSquare color="#3b5998"
   }
 }
 
+/* PROJECT ITEM */
+.projectItem {
+  padding-top: 4rem;
+}
+.projectItem .projectItem-img {
+  width: 100%;
+  height: 400px;
+  overflow: hidden;
+  border-radius: 12px;
+  display: inline-block;
+  border: 3px solid #16293c;
+}
+
+.projectItem .projectItem-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.projectItem .projectItem-info {
+  margin-top: 0rem;
+  background-color: #16293c;
+  color: #d9d8d8;
+  border-radius: 12px;
+  padding: 0.5rem;
+}
+
+.projectItem .projectItem-info .projectItem-title {
+  color: #d9d8d8;
+  font-size: 1.5rem;
+}
+
+.projectItem .projectItem-info .projectItem-desc {
+  font-size: 1rem;
+  margin-bottom: 0;
+}
+
+@media screen and (max-width: 768px) {
+  .projectItem .projectItem-img {
+    height: 350px;
+  }
+}
+
+/* PROJECT SECTION */
+.projectSection {
+  padding-bottom: 10rem;
+}
+
+.projectSection .projects-allitems {
+  display: flex;
+  gap: 1.5rem;
+  padding-top: 0rem;
+}
+
+.projectSection .swiper-container {
+  padding-top: 5rem;
+  max-width: 100%;
+}
+
+.projectSection .swiper-button-prev,
+.projectSection .swiper-button-next {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  background-color: #16293c;
+  color: #d9d8d8;
+  z-index: 10;
+  right: 150px;
+  left: auto;
+  top: 0;
+  transform: translateY(50%);
+  border-radius: 8px;
+}
+
+.projectSection .swiper-button-next {
+  right: 90px;
+}
+
+.projectSection .swiper-button-next::after,
+.projectSection .swiper-button-prev::after {
+  font-size: 2rem;
+}
+
+@media screen and (max-width: 768px) {
+  /* .projectSection {
+    width: 400px;
+  }
+  .projectSection .projects-allitems {
+    flex-direction: column;
+    width: 100%;
+    margin: 0 auto;
+    margin-top: 2rem;
+    gap: 5rem;
+  }
+
+  .projectSection .projectItem .projectItem-img {
+    width: 100%; */
+  /* } */
+}
+
 .App-header {
   position: relative;
   display: flex;
@@ -813,6 +913,7 @@ FaFacebookSquare color="#3b5998"
   background: #fff;
   color: #16293c;
   animation: scrollTop 1.5s infinite ease;
+  z-index: 100;
 }
 
 @keyframes scrollTop {
