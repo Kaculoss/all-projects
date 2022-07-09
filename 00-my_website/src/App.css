@@ -211,6 +211,7 @@ p {
   color: #080f15;
   text-transform: uppercase;
   font-weight: bolder;
+  cursor: pointer;
 }
 
 .MyButton .outline-link-button {
@@ -732,21 +733,46 @@ FaFacebookSquare color="#3b5998"
   .projectSection .projects-allitems {
     padding-top: 6rem;
   }
+}
 
-  /* .projectSection {
-    width: 400px;
-  }
-  .projectSection .projects-allitems {
-    flex-direction: column;
-    width: 100%;
-    margin: 0 auto;
-    margin-top: 2rem;
-    gap: 5rem;
+/* CONTACT SECTION */
+.contactSection {
+  padding-bottom: 10rem;
+}
+
+.contactSection .container {
+  padding: 2rem 0.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  flex-direction: column;
+  background-color: #ffefe9;
+  border-radius: 12px;
+}
+
+.contactSection h4 {
+  font-size: 1.3rem;
+}
+
+.contactSection h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.contactSection .MyButton .link-button {
+  animation: zoom-in-zoom-out 3s ease infinite;
+}
+
+@media screen and (max-width: 768px) {
+  .contactSection h4 {
+    font-size: 1rem;
   }
 
-  .projectSection .projectItem .projectItem-img {
-    width: 100%; 
-  }*/
+  .contactSection h2 {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+  }
 }
 
 .App-header {
@@ -785,7 +811,7 @@ FaFacebookSquare color="#3b5998"
   align-items: flex-start;
 }
 
-.info a {
+.info .MyButton .link-button {
   margin-left: 30px;
   margin-bottom: 30px;
   padding: 0.8em 1em;
@@ -793,13 +819,8 @@ FaFacebookSquare color="#3b5998"
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #080f15;
-  text-transform: uppercase;
   font-size: 1rem;
   font-weight: bolder;
-  border-radius: 10px;
-  background: linear-gradient(90deg, #0162c8, #55e7fc);
-  cursor: pointer;
   animation: zoom-in-zoom-out 3s ease infinite;
 }
 
@@ -932,44 +953,7 @@ FaFacebookSquare color="#3b5998"
   font-size: 1.2rem;
 }
 
-.App-footer {
-  background-color: #080f15;
-  color: #ffefe9;
-  padding: 1rem;
-  margin-top: 50px;
-}
-.App-footer div {
-  margin-top: 0.5rem;
-}
-.App-footer-icons li {
-  cursor: pointer;
-  transition: 0.2s ease-in-out;
-  /* background-color: aqua; */
-}
-
-.App-footer-icons li:hover {
-  transform: translate(0, -0.3em) scale(1.1);
-}
-
-.App-footer-texts li {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-}
-
-.App-footer ul {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-}
-
-.App-footer li {
-  margin-left: 0.3rem;
-  margin-right: 0.3rem;
-}
-
+/* SCROLL BUTTON */
 .visible-scroll {
   cursor: pointer;
   position: fixed;
@@ -998,4 +982,85 @@ FaFacebookSquare color="#3b5998"
 
 .non-visible-scroll {
   display: none;
+}
+
+/* FOOTER */
+.Footer {
+  background-color: #080f15;
+  color: #ffefe9;
+}
+
+.Footer .footer-main {
+  padding: 1rem 1.5rem;
+  text-align: left;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.Footer .footer-main .PText {
+  font-size: 1rem;
+  text-align: left;
+  margin: 0;
+}
+
+.Footer .footer-col {
+  flex: 1;
+}
+
+.Footer .footer-main .footer-about {
+  flex: 2;
+}
+
+.Footer .footer-contact-info li {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.Footer .footer-footer {
+  background-color: #d9d8d8;
+  color: #16293c;
+}
+
+.Footer .footer-footer .PText {
+  text-align: center;
+  font-size: 1rem;
+}
+
+.Footer .PText p {
+  margin-bottom: 0;
+}
+
+@media screen and (max-width: 768px) {
+  .Footer .footer-main {
+    flex-direction: column;
+    text-align: center;
+    gap: 2.5rem;
+  }
+
+  .Footer .footer-about {
+    flex: 1;
+    text-align: center;
+  }
+
+  .Footer .footer-about .PText {
+    text-align: center;
+  }
+
+  .Footer .footer-col {
+    text-align: center;
+  }
+
+  .Footer .footer-contact-info ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .Footer .social-media-icons .dcolumn {
+    flex-direction: row;
+  }
 }

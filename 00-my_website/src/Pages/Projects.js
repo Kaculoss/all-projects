@@ -1,17 +1,10 @@
 import { projectData } from "../projectData";
 import { IconContext } from "react-icons";
-import {
-  FaGithubSquare,
-  FaLinkedin,
-  FaTwitterSquare,
-  FaInstagramSquare,
-  FaFacebookSquare,
-  FaWhatsappSquare,
-  FaFileCode,
-} from "react-icons/fa";
-import { GrMail } from "react-icons/gr";
-import SocialMediaIcons, { openInNewTab } from "../Components/SocialMediaIcons";
+import { FaFileCode } from "react-icons/fa";
+import SocialMediaIcons from "../Components/SocialMediaIcons";
 import { ScrollToBottom, ScrollToTop } from "../Components/ScrollButton";
+import Footer from "../Components/Footer";
+import MyButton from "../Components/MyButton";
 
 function Projects() {
   return (
@@ -30,14 +23,15 @@ function Projects() {
                   creating these cool projects.
                 </p>
               </div>
-              <a
-                href="https://github.com/Kaculoss/all-projects"
-                target="_blank"
-                rel="noreferrer"
-              >
-                <FaFileCode size="1.5em" />
-                <span>Project Source Codes</span>
-              </a>
+              <MyButton
+                btnLink="https://github.com/Kaculoss/all-projects"
+                btnText={
+                  <>
+                    <FaFileCode size="1.5em" />
+                    <span>Project Source Codes</span>
+                  </>
+                }
+              />
             </div>
           </div>
         </header>
@@ -48,41 +42,7 @@ function Projects() {
         </main>
         <ScrollToTop />
         <ScrollToBottom />
-        <footer className="App-footer">
-          <div className="App-footer-icons">
-            <ul>
-              <li onClick={() => openInNewTab(projectData.profiles.github)}>
-                <FaGithubSquare color="#4078c0" />
-              </li>
-              <li onClick={() => openInNewTab(projectData.profiles.linkedin)}>
-                <FaLinkedin color="#0077b5" />
-              </li>
-              <li onClick={() => openInNewTab(projectData.profiles.twitter)}>
-                <FaTwitterSquare color="#00acee" />
-              </li>
-              <li onClick={() => openInNewTab(projectData.profiles.instagram)}>
-                <FaInstagramSquare color="#cd486b" />
-              </li>
-              <li onClick={() => openInNewTab(projectData.profiles.twitter)}>
-                <FaFacebookSquare color="#3b5998" />
-              </li>
-            </ul>
-          </div>
-          <div className="App-footer-texts">
-            <ul>
-              <li>
-                <GrMail color="#c71610" />
-                <span style={{ marginLeft: ".3rem" }}>
-                  Sanialhassan853@gmail.com
-                </span>
-              </li>
-              <li>
-                <FaWhatsappSquare color="#25d366" />
-                <span style={{ marginLeft: ".3rem" }}>+23354 9853 041</span>
-              </li>
-            </ul>
-          </div>
-        </footer>
+        <Footer />
       </div>
     </IconContext.Provider>
   );
