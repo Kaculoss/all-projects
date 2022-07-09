@@ -309,7 +309,7 @@ FaFacebookSquare color="#3b5998"
 .hero {
   margin-top: -50px;
   height: 100vh;
-  min-height: 950px;
+  min-height: 1050px;
   width: 100%;
   text-align: center;
   display: flex;
@@ -353,19 +353,14 @@ FaFacebookSquare color="#3b5998"
 }
 
 .hero .social-media-icons {
-  position: absolute;
-  bottom: 50px;
-  width: 9rem;
+  margin-top: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .hero .MyButton .link-button {
   animation: zoom-in-zoom-out 3s ease infinite;
-}
-
-@media screen and (max-width: 1000px) {
-  .hero .social-media-icons {
-    display: none;
-  }
 }
 
 @media screen and (max-width: 768px) {
@@ -578,6 +573,29 @@ FaFacebookSquare color="#3b5998"
   }
 }
 
+/* MY RADIO BUTTON */
+.MyRadioButton {
+  font-size: 1.2rem;
+  font-weight: bolder;
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  gap: 2rem;
+}
+
+.MyRadioButton .radio-input label {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.3rem;
+  cursor: pointer;
+}
+
+.MyRadioButton .radio-input-selected {
+  font-size: 1.5rem;
+  color: #080f15;
+}
+
 /* PROJECT ITEM */
 .projectItem {
   padding-top: 4rem;
@@ -627,9 +645,30 @@ FaFacebookSquare color="#3b5998"
 }
 
 .projectSection .projects-allitems {
+  position: relative;
   display: flex;
   gap: 1.5rem;
   padding-top: 0rem;
+}
+
+.projectSection .fade-enter {
+  opacity: 0;
+}
+
+.projectSection .fade-enter-active {
+  opacity: 1;
+  transition: 250s ease-in;
+  transition-property: opacity;
+}
+
+.projectSection .fade-exit {
+  opacity: 1;
+}
+
+.projectSection .fade-exit-active {
+  opacity: 0;
+  transition: 200ms ease-out;
+  transition-property: opacity;
 }
 
 .projectSection .swiper-container {
@@ -661,7 +700,39 @@ FaFacebookSquare color="#3b5998"
   font-size: 2rem;
 }
 
+.projectSection .MyRadioButton {
+  position: absolute;
+  top: 20px;
+  left: 10px;
+  z-index: 10;
+}
+
 @media screen and (max-width: 768px) {
+  .projectSection .MyRadioButton {
+    flex-direction: column;
+    gap: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    z-index: 1;
+  }
+
+  .projectSection .swiper-button-prev {
+    top: 0;
+    left: calc(50% - 65px);
+  }
+
+  .projectSection .swiper-button-next {
+    top: 0;
+    left: calc(50% + 15px);
+  }
+
+  .projectSection .projects-allitems {
+    padding-top: 6rem;
+  }
+
   /* .projectSection {
     width: 400px;
   }
@@ -674,8 +745,8 @@ FaFacebookSquare color="#3b5998"
   }
 
   .projectSection .projectItem .projectItem-img {
-    width: 100%; */
-  /* } */
+    width: 100%; 
+  }*/
 }
 
 .App-header {

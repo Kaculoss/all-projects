@@ -13,7 +13,7 @@ export const projectData = {
   },
   allProjects: [
     {
-      name: "basic projects",
+      name: "basic",
       projects: [
         {
           id: 1,
@@ -36,7 +36,7 @@ export const projectData = {
       ],
     },
     {
-      name: "medium class projects",
+      name: "medium class",
       projects: [
         {
           id: 1,
@@ -53,7 +53,7 @@ export const projectData = {
       ],
     },
     {
-      name: "large-scale projects",
+      name: "large-scale",
       projects: [
         {
           id: 1,

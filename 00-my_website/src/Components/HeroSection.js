@@ -21,8 +21,8 @@ export default function HeroSection() {
             ducimus expedita! Iusto odit recusandae aperiam sint!
           </Ptext>
           <MyButton btnLink="/projects" btnText="see my works" />
+          <SocialMediaIcons drow />
         </div>
-        <SocialMediaIcons drow={false} />
       </div>
     </div>
   );

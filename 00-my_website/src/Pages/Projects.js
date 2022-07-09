@@ -92,7 +92,7 @@ const AllProjects = ({ projects }) => {
   return (
     <>
       <div className="App-main-title">
-        <h2>{projects.name}</h2>
+        <h2>{projects.name} Projects</h2>
         <div className="underline"></div>
       </div>
       <div className="App-main-projects">
