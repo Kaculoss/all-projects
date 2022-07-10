@@ -1,5 +1,7 @@
 import React from "react";
 import NavMenu from "./Components/NavMenu";
+import Footer from "./Components/Footer";
+import { ScrollToBottom, ScrollToTop } from "./Components/ScrollButton";
 import "./App.css";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Home from "./Pages/Home";
@@ -18,6 +20,9 @@ function App() {
           <Route path="/contact" element={<Contact />} />
           <Route path="/" element={<Home />} />
         </Routes>
+        <ScrollToTop />
+        <ScrollToBottom />
+        <Footer />
       </Router>
     </>
   );

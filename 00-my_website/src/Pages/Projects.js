@@ -2,8 +2,6 @@ import { projectData } from "../projectData";
 import { IconContext } from "react-icons";
 import { FaFileCode } from "react-icons/fa";
 import SocialMediaIcons from "../Components/SocialMediaIcons";
-import { ScrollToBottom, ScrollToTop } from "../Components/ScrollButton";
-import Footer from "../Components/Footer";
 import MyButton from "../Components/MyButton";
 
 function Projects() {
@@ -40,9 +38,6 @@ function Projects() {
             <AllProjects key={project.name} projects={project} />
           ))}
         </main>
-        <ScrollToTop />
-        <ScrollToBottom />
-        <Footer />
       </div>
     </IconContext.Provider>
   );

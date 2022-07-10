@@ -11,6 +11,31 @@ export const projectData = {
     facebook: "https://web.facebook.com/kaculossde.dhopebwoy/",
     github: "https://github.com/Kaculoss",
   },
+  aboutMe: {
+    education: [
+      { stage: "Basic", school: "King of Kings Prep. Sch." },
+      { stage: "Secondary", school: "Koforidua Senior High Technical Sch." },
+      {
+        stage: "Tertiary",
+        school: "Kwame Nkrumah University of Science and Technology",
+      },
+    ],
+    skill: [
+      { type: "FrontEnd", skills: ["HTML", "CSS", "JavaScript", "React.Js"] },
+      {
+        type: "BackEnd",
+        skills: ["JavaScript", "Python", "PHP", "MySQL", "Git"],
+      },
+      { type: "Mobile App", skills: ["React Native", "CSS", "JavaScript"] },
+    ],
+    experience: [
+      {
+        year: "2018 - 2022",
+        work: ["Self-taught", "Lots of Practices", "Taking on Challenges"],
+      },
+      { year: "2022 - ", work: ["Freelance Web developer"] },
+    ],
+  },
   allProjects: [
     {
       name: "basic",

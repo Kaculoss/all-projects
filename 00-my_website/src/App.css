@@ -44,6 +44,9 @@ h4 {
 p {
   margin-bottom: 1.25rem;
 }
+img {
+  width: 100%;
+}
 
 @media screen and (min-width: 768px) {
   h1 {
@@ -775,6 +778,149 @@ FaFacebookSquare color="#3b5998"
   }
 }
 
+/* ABOUTINFOITEM */
+.AboutInfoItem {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin-top: 2rem;
+}
+
+.AboutInfoItem .title {
+  min-width: 18rem;
+  font-size: 1.6rem;
+  margin-bottom: 0;
+}
+
+.AboutInfoItem .items {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.AboutInfoItem .items .item {
+  background-color: #ffefe9;
+  font-weight: bolder;
+  padding: 1rem;
+  border-radius: 8px;
+}
+
+.AboutInfoItem .PText p {
+  margin-bottom: 0;
+  font-size: 1.5rem;
+}
+
+.aboutPage .contactSection {
+  padding-bottom: 0;
+}
+
+@media screen and (max-width: 768px) {
+  .AboutInfoItem {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+
+  .AboutInfoItem .items {
+    position: initial;
+    gap: 0.8rem;
+  }
+
+  .AboutInfoItem .title {
+    font-size: 1rem;
+  }
+
+  .AboutInfoItem .PText p {
+    font-size: 1.2rem;
+  }
+}
+
+/* ABOUT PAGE */
+.aboutPage {
+  padding: 10rem 0;
+}
+
+.aboutPage .top-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.aboutPage .left {
+  flex: 3;
+}
+
+.aboutPage .right {
+  flex: 2;
+}
+
+.aboutPage .about-subheading {
+  font-size: 1.5rem;
+  margin-bottom: 0.8rem;
+}
+
+.aboutPage .about-subheading span {
+  font-weight: bolder;
+  background-color: #ffefe9;
+  padding: 0.5rem;
+  border-radius: 8px;
+}
+
+.aboutPage .about-heading {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.aboutPage .about-info {
+  margin-bottom: 1.5rem;
+}
+
+.aboutPage .about-info .PText {
+  max-width: 100%;
+}
+
+.aboutPage .MyButton .link-button {
+  text-transform: none;
+  animation: zoom-in-zoom-out 3s ease infinite;
+}
+
+.aboutPage .about-info-items {
+  margin-top: 10rem;
+}
+
+.aboutPage .about-info-item {
+  margin-bottom: 6rem;
+}
+
+.aboutPage .about-info-heading {
+  font-size: 2rem;
+  text-transform: uppercase;
+}
+
+@media screen and (max-width: 768px) {
+  .aboutPage {
+    padding: 5rem 0;
+  }
+
+  .aboutPage .top-section {
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .aboutPage .about-heading {
+    font-size: 2rem;
+  }
+
+  .aboutPage .about-subheading {
+    font-size: 1rem;
+  }
+
+  .aboutPage .about-info-heading {
+    font-size: 1.7rem;
+  }
+}
+
 .App-header {
   position: relative;
   display: flex;
@@ -1031,6 +1177,11 @@ FaFacebookSquare color="#3b5998"
 
 .Footer .PText p {
   margin-bottom: 0;
+}
+
+.Footer .social-media-icons .dcolumn {
+  align-items: center;
+  justify-content: center;
 }
 
 @media screen and (max-width: 768px) {
