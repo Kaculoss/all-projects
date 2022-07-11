@@ -78,19 +78,6 @@ img {
   margin: 0 auto;
 }
 
-/* .App-header::before {
-  content: "";
-  position: absolute;
-  width: 100%;
-  height: 65%;
-  top: 0;
-  left: 0;
-  background: url(./images/header\ back.png);
-  background-size: cover;
-  background-repeat: no-repeat;
-  z-index: -1;
-} */
-
 /* NAVMENU */
 .NavMenu-div {
   background: #fff;
@@ -921,43 +908,129 @@ FaFacebookSquare color="#3b5998"
   }
 }
 
-.App-header {
+/* PROJECT GROUP */
+.projectGroup {
+  padding-bottom: 10rem;
+}
+
+.projectGroup .main-title {
+  font-size: 1.5rem;
+}
+
+.projectGroup .underline {
+  margin-top: 3px;
+  width: 100%;
+  height: 1px;
+  background: #16293c;
+  filter: blur(1.2px);
+}
+
+.projectGroup .main-projects {
+  display: flex;
+  flex-wrap: wrap;
+  /* position: relative; */
+  gap: 1.5rem;
+  padding-top: 0rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.projectGroup .projectItem {
+  width: 100%;
+  max-width: 350px;
+  transition: 0.3s ease;
+  cursor: pointer;
+  padding-top: 0;
+  margin-top: 2rem;
+}
+
+.projectGroup .projectItem:hover {
+  transform: scale(1.05);
+  -webkit-transform: scale(1.05);
+  -ms-transform: scale(1.05);
+}
+
+.projectGroup .projectItem .projectItem-img {
+  box-shadow: -3px 3px 5px rgba(0, 0, 0, 0.2), 3px 0 10px rgba(0, 0, 0, 0.2);
+  border: none;
+}
+
+.projectGroup .projectItem .projectItem-info {
+  box-shadow: -3px 3px 5px rgba(0, 0, 0, 0.2), 3px 0 10px rgba(0, 0, 0, 0.2);
+}
+
+@media screen and (max-width: 768px) {
+  .projectGroup .projectItem {
+    max-width: 100%;
+  }
+}
+
+/* PROJECTS PAGE */
+
+/* .App-header {
   position: relative;
   display: flex;
   flex-direction: column;
   background-color: #fff;
   width: 100%;
-  /* justify-content: space-between; */
   z-index: 1;
   align-items: flex-start;
+} */
+
+.projectPage .projectPage-header {
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 8rem;
 }
 
-.App-header .social-media-icons {
+.projectPage .projectPage-img {
+  flex: 6;
+}
+
+/* .App-header .social-media-icons {
   display: none;
-}
+} */
 
-.App-header-info {
+/* .App-header-info {
   width: 100%;
   display: flex;
   flex-direction: row-reverse;
   justify-content: space-between;
   align-items: center;
-}
+} */
 
-.personal-info {
+/* .personal-info {
   padding-top: 40px;
   padding-left: 10px;
-}
+} */
 
-.info {
-  height: 60vh;
+.projectPage .info {
+  min-height: 50vh;
+  flex: 5;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: flex-start;
+  padding-left: 1.5rem;
 }
 
-.info .MyButton .link-button {
+.projectPage .personal-info {
+  width: 100%;
+}
+
+.projectPage .personal-info .PText {
+  max-width: 100%;
+  margin: 0;
+}
+
+.projectPage .personal-info .PText p {
+  width: 100%;
+  /* margin: 0; */
+}
+
+.projectPage .info .MyButton .link-button {
   margin-left: 30px;
   margin-bottom: 30px;
   padding: 0.8em 1em;
@@ -968,6 +1041,51 @@ FaFacebookSquare color="#3b5998"
   font-size: 1rem;
   font-weight: bolder;
   animation: zoom-in-zoom-out 3s ease infinite;
+}
+
+.projectPage .projects-main {
+  padding-top: 6rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.projectPage .projects-main-up {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem;
+  margin-bottom: 2rem;
+  border: 2px solid #16293c;
+  border-radius: 10px;
+}
+
+.projectPage .projects-searchBar {
+  width: 300px;
+  position: relative;
+}
+
+/* .projectPage .projects-searchBar form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+} */
+
+.projectPage .projects-searchBar input {
+  width: 100%;
+  font-size: 1.5rem;
+  padding: 0.8rem;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+  color: #16293c;
+}
+
+.projectPage .projects-searchBar .searchIcon {
+  position: absolute;
+  right: 1rem;
+  top: 0.85rem;
+  width: 2rem;
 }
 
 @keyframes zoom-in-zoom-out {
@@ -982,31 +1100,49 @@ FaFacebookSquare color="#3b5998"
   }
 }
 
-.App-header-info p {
+@media screen and (max-width: 768px) {
+  .projectPage .projectPage-img {
+    display: none;
+  }
+
+  .projectPage .info {
+    flex: 1;
+  }
+
+  .projectPage .projects-main-up {
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .projectPage .MyRadioButton {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .projectPage .projects-searchBar,
+  .projectPage .projects-searchBar form,
+  .projectPage .projects-searchBar input {
+    width: 100%;
+  }
+}
+
+/* .App-header-info p {
   margin-left: 10px;
   font-size: 1rem;
-}
+} */
 
-.header-image {
+/* .header-image {
   display: none;
-}
+} */
 
-@media screen and (min-width: 768px) {
+/* @media screen and (min-width: 768px) {
   .App-header .social-media-icons {
     display: block;
     margin-top: 10px;
     position: absolute;
     right: 10px;
   }
-
-  /* .App-header-personal li {
-    cursor: pointer;
-    transition: 0.2s ease-in-out;
-  }
-
-  .App-header-personal li:hover {
-    transform: translate(0, 0.3em) scale(1.1);
-  } */
 
   .header-image {
     display: block;
@@ -1015,89 +1151,7 @@ FaFacebookSquare color="#3b5998"
     object-fit: cover;
     z-index: -1;
   }
-}
-
-.App-main {
-  padding-top: 10px;
-  display: flex;
-  flex-direction: column;
-}
-
-.App-main-title {
-  margin-top: 80px;
-  margin-left: 10px;
-}
-
-.underline {
-  margin-top: 3px;
-  width: 100%;
-  height: 1px;
-  background: #16293c;
-  filter: blur(1.2px);
-}
-
-.App-main-projects {
-  margin-bottom: 50px;
-  margin-top: 20px;
-  display: flex;
-  flex-wrap: wrap;
-}
-
-@media screen and (min-width: 768px) {
-  .App-main-projects {
-    width: 85%;
-    margin: auto;
-    margin-bottom: 50px;
-    margin-top: 20px;
-  }
-}
-
-.project {
-  margin: 0 auto;
-  width: 90%;
-  height: 50vh;
-  /* max-width: 400px; */
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-between;
-  background: #fff;
-  border-radius: 10px;
-  margin-bottom: 50px;
-  box-shadow: -3px 3px 5px rgba(0, 0, 0, 0.2), 3px 0 10px rgba(0, 0, 0, 0.2);
-  transition: 0.3s ease;
-  cursor: pointer;
-}
-
-@media screen and (min-width: 768px) {
-  .project {
-    max-width: 350px;
-  }
-}
-
-.project:hover {
-  transform: scale(1.05);
-  -webkit-transform: scale(1.05);
-  -ms-transform: scale(1.05);
-}
-
-.project img {
-  width: 100%;
-  height: 85%;
-  object-fit: cover;
-}
-
-.project-name {
-  flex: 15%;
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.project-name h3 {
-  font-size: 1.2rem;
-}
+} */
 
 /* SCROLL BUTTON */
 .visible-scroll {

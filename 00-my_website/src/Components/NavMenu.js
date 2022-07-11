@@ -35,7 +35,6 @@ const NavMenu = () => {
         <li>
           <NavLink
             to="/"
-            exact
             style={activate}
             onClick={() => setShowNav(!showNav)}
             role="button"
