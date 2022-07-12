@@ -1127,32 +1127,6 @@ FaFacebookSquare color="#3b5998"
   }
 }
 
-/* .App-header-info p {
-  margin-left: 10px;
-  font-size: 1rem;
-} */
-
-/* .header-image {
-  display: none;
-} */
-
-/* @media screen and (min-width: 768px) {
-  .App-header .social-media-icons {
-    display: block;
-    margin-top: 10px;
-    position: absolute;
-    right: 10px;
-  }
-
-  .header-image {
-    display: block;
-    width: 60%;
-    height: 80vh;
-    object-fit: cover;
-    z-index: -1;
-  }
-} */
-
 /* SCROLL BUTTON */
 .visible-scroll {
   cursor: pointer;
@@ -1182,6 +1156,184 @@ FaFacebookSquare color="#3b5998"
 
 .non-visible-scroll {
   display: none;
+}
+
+/* CONTACT INFO ITEM */
+.contactInfoItem {
+  padding: 1.5rem;
+  background-color: #ffefe9;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  border-radius: 8px;
+  margin-bottom: 1.5rem;
+}
+
+.contactInfoItem .icon {
+  color: #16293c;
+  background-color: #9e9c9c;
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+}
+
+.contactInfoItem .PText,
+.contactInfoItem .PText p {
+  margin-top: 0;
+  margin-bottom: 0;
+  margin-left: 0;
+  margin-right: 0;
+}
+
+@media screen and (max-width: 500px) {
+  .contactInfoItem {
+    flex-direction: column;
+    justify-content: center;
+  }
+}
+
+/* CONTACT FORM */
+.contactForm {
+  width: 100%;
+}
+
+.contactForm .form-group {
+  width: 100%;
+  margin-bottom: 1rem;
+}
+
+.contactForm .form-group label {
+  font-size: 1.2rem;
+}
+
+.contactForm .form-group input,
+.contactForm .form-group textarea {
+  width: 100%;
+  font-size: 1.5rem;
+  padding: 1rem;
+  color: #16293c;
+  background-color: #ffefe9;
+  outline: none;
+  border: none;
+  border-radius: 8px;
+  margin-top: 0.8px;
+}
+
+.contactForm .form-group textarea {
+  min-height: 250px;
+  resize: vertical;
+}
+
+.contactForm button[type="submit"] {
+  background-color: #16293c;
+  color: #d9d8d8;
+  font-size: 1.5rem;
+  display: inline-block;
+  outline: none;
+  border: none;
+  padding: 1rem 3rem;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+/* CONTACT INFO */
+.ContactInfo {
+  padding: 10rem 0;
+}
+
+.ContactInfo .contactInfo-wrapper {
+  display: flex;
+  gap: 1rem;
+  margin-top: 4rem;
+  justify-content: space-between;
+}
+
+.ContactInfo .contactInfo-wrapper .middle {
+  width: 2px;
+  height: 200px;
+  margin-top: 2rem;
+  background: #16293c;
+}
+
+.ContactInfo .contactInfo-wrapper .left {
+  width: 100%;
+  max-width: 500px;
+}
+
+.ContactInfo .contactInfo-wrapper .right {
+  max-width: 500px;
+  width: 100%;
+  border-radius: 12px;
+}
+
+@media screen and (max-width: 1100px) {
+  .ContactInfo .contactInfo-wrapper {
+    flex-direction: column;
+  }
+
+  .ContactInfo .contactInfo-wrapper .middle {
+    display: none;
+  }
+
+  .ContactInfo .contactInfo-wrapper .left,
+  .ContactInfo .contactInfo-wrapper .right {
+    max-width: 100%;
+  }
+
+  .ContactInfo .contactInfo-wrapper .right {
+    padding: 3rem 1.5rem 1.5rem 1.5rem;
+  }
+}
+
+/* MAP */
+.Map {
+  min-height: 400px;
+}
+
+.Map .container {
+  position: relative;
+  min-height: 400px;
+}
+
+.Map .map-card {
+  position: absolute;
+  right: 35%;
+  top: 35%;
+  padding: 1.5rem;
+  background: #d9d8d8;
+  width: 100%;
+  max-width: 350px;
+  border-radius: 12px;
+}
+
+.Map .map-card .map-card-heading {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.Map .map-card .map-card-link {
+  display: inline-block;
+  font-size: 1.1rem;
+  margin-top: 1.3rem;
+  text-decoration: underline;
+  color: #16293c;
+  font-weight: bolder;
+}
+
+@media screen and (max-width: 768px) {
+  .Map .map-card {
+    right: 10%;
+    top: 25%;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .Map .map-card {
+    right: auto;
+    max-width: none;
+  }
 }
 
 /* FOOTER */
@@ -1269,3 +1421,23 @@ FaFacebookSquare color="#3b5998"
     flex-direction: row;
   }
 }
+
+/* SMOOTH SCROLL */
+/* .myScrollBar {
+  height: 100%;
+
+  overflow: hidden;
+  background-color: #bcb4b4;
+}
+
+.myScrollBar .scroll-content {
+  background-color: #262626;
+}
+
+.myScrollBar .scrollbar-track-y {
+  background: #1e1e1e;
+}
+
+.myScrollBar .scrollbar-thumb-y {
+  background: #bcb4b4;
+} */

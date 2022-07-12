@@ -8,21 +8,24 @@ import Home from "./Pages/Home";
 import About from "./Pages/About";
 import Projects from "./Pages/Projects";
 import Contact from "./Pages/Contact";
+import SmoothScrollBar from "./Components/MovetoTop";
 
 function App() {
   return (
     <>
       <Router>
         <NavMenu />
-        <Routes>
-          <Route path="/about" element={<About />} />
-          <Route path="/projects" element={<Projects />} />
-          <Route path="/contact" element={<Contact />} />
-          <Route path="/" element={<Home />} />
-        </Routes>
-        <ScrollToTop />
-        <ScrollToBottom />
-        <Footer />
+        <SmoothScrollBar>
+          <Routes>
+            <Route path="/about" element={<About />} />
+            <Route path="/projects" element={<Projects />} />
+            <Route path="/contact" element={<Contact />} />
+            <Route path="/" element={<Home />} />
+          </Routes>
+          <ScrollToTop />
+          <ScrollToBottom />
+          <Footer />
+        </SmoothScrollBar>
       </Router>
     </>
   );

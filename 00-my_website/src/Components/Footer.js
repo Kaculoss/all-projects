@@ -56,7 +56,7 @@ export default function Footer() {
         <div className="footer-footer">
           <Ptext>
             © 2022 - Sani Alhassan (Keezy 🚀✨💫) | Designed By{" "}
-            <a href="#" target="_blank" rel="noreferrer">
+            <a href="/" target="_blank" rel="noreferrer">
               Sani Alhassan
             </a>
           </Ptext>
